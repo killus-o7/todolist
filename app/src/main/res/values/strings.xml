@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">todolist</string>
+    <string name="near_deadline_channel_name">notify when near deadline</string>
+    <string name="on_deadline_channel_name">notify when on deadline</string>
+    <string name="tasks_for_today">notify amount of tasks for a day</string>
+</resources>
