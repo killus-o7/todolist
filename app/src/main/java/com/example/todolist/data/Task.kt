@@ -1,4 +1,4 @@
-package com.example.audioplayer.data
+package com.example.todolist.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -10,14 +10,7 @@ class Task (
     @PrimaryKey val id: String,
     val name: String,
     val status: TaskStatus,
-
-    private val year: Int,
-    private val month: Int,
-    private val day: Int,
-    private val hour: Int,
-    private val minute: Int,
+    val date: String
 ){
-    fun getCalendarInstance(): Calendar = Calendar.getInstance().apply {
-        set(year, month, day, hour, minute)
-    }
+
 }
