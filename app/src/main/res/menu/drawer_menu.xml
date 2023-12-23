@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all"
+        android:title="home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"/>
+    <item
+        android:id="@+id/important"
+        android:title="important"
+        android:enabled="true"
+        android:icon="@drawable/baseline_notification_important_24"/>
+    <item
+        android:id="@+id/finished"
+        android:title="finished"
+        android:enabled="true"
+        android:icon="@drawable/baseline_inventory_24"/>
+    <item
+        android:id="@+id/listMode"
+        android:title="lists"
+        android:enabled="true"
+        android:icon="@drawable/baseline_event_note_24"/>
+</menu>

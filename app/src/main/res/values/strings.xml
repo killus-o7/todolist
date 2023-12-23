@@ -3,4 +3,11 @@
     <string name="near_deadline_channel_name">notify when near deadline</string>
     <string name="on_deadline_channel_name">notify when on deadline</string>
     <string name="tasks_for_today">notify amount of tasks for a day</string>
+
+    <string name="default_card_title">Przykładowy tytuł zadania</string>
+    <string name="default_card_date">Przykładowy tytuł zadania</string>
+
+    <string name="card_status_deadline">po czasie!!!</string>
+    <string name="card_status_todo">do zrobienia</string>
+    <string name="card_status_done">gotowe</string>
 </resources>
