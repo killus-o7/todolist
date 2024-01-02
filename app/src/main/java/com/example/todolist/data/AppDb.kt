@@ -5,11 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Task::class], version = 2)
+@Database(entities = [Task::class], version = 3)
 abstract class AppDb : RoomDatabase() {
-    abstract fun musicDao() : TaskDao
+    abstract fun taskDao() : TaskDao
     var onInsert = {}
-    val sounds: MutableList<Task> = mutableListOf()
 
     companion object {
         @Volatile
@@ -19,7 +18,7 @@ abstract class AppDb : RoomDatabase() {
             Room.databaseBuilder(
                 context.applicationContext,
                 AppDb::class.java,
-                "audioplayer"
+                "tasks"
             ).build().also {
                 INSTANCE = it
             }

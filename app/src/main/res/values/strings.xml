@@ -7,7 +7,16 @@
     <string name="default_card_title">Przykładowy tytuł zadania</string>
     <string name="default_card_date">Przykładowy tytuł zadania</string>
 
-    <string name="card_status_deadline">po czasie!!!</string>
-    <string name="card_status_todo">do zrobienia</string>
-    <string name="card_status_done">gotowe</string>
+    <string name="card_deadline">po czasie!!!</string>
+
+    <string name="default_list_name">default list</string>
+    <string name="default_list_completion">default list</string>
+    <string name="default_list_priority">niski priorytet</string>
+
+    <string name="item_priority_high">wysoki priorytet</string>
+    <string name="item_priority_avg">średni priorytet</string>
+    <string name="item_priority_low">niski priorytet</string>
+
+    <string name="item_edit_text">edytuj</string>
+    <string name="item_delete_text">usuń</string>
 </resources>

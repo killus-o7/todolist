@@ -7,10 +7,9 @@ import java.util.Calendar
 
 @Entity
 class Task (
-    @PrimaryKey val id: String,
-    val name: String,
-    val status: TaskStatus,
-    val date: String
-){
-
-}
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    var name: String = "",
+    var desc: String = "",
+    var isDone: Boolean = false,
+    var date: Long = 0
+)

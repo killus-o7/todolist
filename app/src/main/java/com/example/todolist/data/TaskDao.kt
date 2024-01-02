@@ -5,17 +5,21 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface TaskDao {
     @Query("SELECT * FROM Task")
-    fun fetchSongs(): List<Task>
+    fun fetchTasks(): List<Task>
 
     @Query("SELECT * FROM Task WHERE id = :id")
-    fun fetchSongByName(id: Int): Task
+    fun fetchTaskById(id: Int): Task
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertSong(vararg item: Task)
+
+    @Update
+    fun updateSong(vararg item: Task)
 
     @Delete
     fun delete(item: Task)
