@@ -1,22 +1,17 @@
 <resources>
     <string name="app_name">todolist</string>
-    <string name="near_deadline_channel_name">notify when near deadline</string>
-    <string name="on_deadline_channel_name">notify when on deadline</string>
-    <string name="tasks_for_today">notify amount of tasks for a day</string>
 
     <string name="default_card_title">Przykładowy tytuł zadania</string>
     <string name="default_card_date">Przykładowy tytuł zadania</string>
 
     <string name="card_deadline">po czasie!!!</string>
 
-    <string name="default_list_name">default list</string>
-    <string name="default_list_completion">default list</string>
-    <string name="default_list_priority">niski priorytet</string>
-
-    <string name="item_priority_high">wysoki priorytet</string>
-    <string name="item_priority_avg">średni priorytet</string>
-    <string name="item_priority_low">niski priorytet</string>
-
     <string name="item_edit_text">edytuj</string>
     <string name="item_delete_text">usuń</string>
+
+    <string name="form_name">Nazwa zadania</string>
+    <string name="form_desc">Opis zadania</string>
+    <string name="form_date_picker">Ustaw dzień terminu</string>
+    <string name="form_time_picker">Ustaw godzinę terminu</string>
+    <string name="form_submit">Zapisz zadanie</string>
 </resources>

@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             app:srcCompat="@drawable/baseline_add_24"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:importantForAccessibility="no" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

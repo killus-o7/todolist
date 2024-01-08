@@ -2,16 +2,12 @@ package com.example.todolist
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.os.Build
 import android.os.Bundle
-import android.service.autofill.CharSequenceTransformation
-import android.text.Editable
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.EditText
 import android.widget.TimePicker
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.set
 import com.example.todolist.data.AppDb
 import com.example.todolist.data.Task
 import com.example.todolist.databinding.ActivityAddBinding
@@ -29,6 +25,8 @@ class AddActivity : AppCompatActivity() {
 
     private var task = Task()
 
+    @RequiresApi(Build.VERSION_CODES.O)
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(b.root)
@@ -54,13 +52,17 @@ class AddActivity : AppCompatActivity() {
             }
 
             GlobalScope.launch {
-                if (taskId == -1) db.taskDao().insertSong(
+                if (taskId == -1) db.taskDao().insertTask(
                     Task(name = title, desc = desc, date = date.timeInMillis)
-                ) else db.taskDao().updateSong(
+                ) else db.taskDao().updateTask(
                     Task(id = taskId, name = title, desc = desc, date = date.timeInMillis)
                 )
                 db.onInsert()
             }
+
+            cancelNotification(this, taskId)
+            scheduleNotification(this, taskId, date.timeInMillis)
+
             finish()
         }
     }

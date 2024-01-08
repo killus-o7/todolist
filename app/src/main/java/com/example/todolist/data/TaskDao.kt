@@ -16,10 +16,10 @@ interface TaskDao {
     fun fetchTaskById(id: Int): Task
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertSong(vararg item: Task)
+    fun insertTask(vararg item: Task)
 
     @Update
-    fun updateSong(vararg item: Task)
+    fun updateTask(vararg item: Task)
 
     @Delete
     fun delete(item: Task)

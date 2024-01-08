@@ -1,5 +1,6 @@
 package com.example.todolist
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val b by lazy {ActivityMainBinding.inflate(layoutInflater)}
     private val db by lazy { AppDb[this] }
     private lateinit var adapter: TaskAdapter
+    @OptIn(DelicateCoroutinesApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(b.root)
@@ -38,6 +40,7 @@ class MainActivity : AppCompatActivity() {
                             db.taskDao().delete(it)
                             runOnUiThread {
                                 loadTasks()
+                                cancelNotification(this@MainActivity, it.id)
                             }
                         }
                     }
@@ -55,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @OptIn(DelicateCoroutinesApi::class)
     private fun loadTasks() = GlobalScope.launch {
         val tasks = db.taskDao().fetchTasks()

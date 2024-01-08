@@ -14,7 +14,7 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task Name">
+        android:hint="@string/form_name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/taskNameEditText"
@@ -27,7 +27,8 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Task Description">
+        android:layout_marginTop="8dp"
+        android:hint="@string/form_desc">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/taskDescriptionEditText"
@@ -36,21 +37,29 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        app:icon="@drawable/baseline_calendar_month_24"
         android:id="@+id/deadlineDateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Deadline Date"/>
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/form_date_picker"/>
 
     <Button
+        style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+        app:icon="@drawable/baseline_access_time_24"
         android:id="@+id/deadlineTimeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set Deadline Time"/>
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/form_time_picker"/>
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Task"
+        android:text="@string/form_submit"
         android:layout_marginTop="16dp"/>
 </LinearLayout>
